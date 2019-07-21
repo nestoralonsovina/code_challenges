@@ -9,7 +9,7 @@ def josephus_survivor(n,k):
     item = range(1, n + 1)
     k_range = range(1, k)
     q = deque(item)
-    while len(q) > 1:
+    while len(q) != 1:
         for i in k_range:
             q.rotate(-1)
         q.popleft()
